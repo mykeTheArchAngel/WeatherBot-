@@ -1,49 +1,31 @@
-Step-by-Step Explanation:
+#--KALI LINUX--
+Create a Virtual Environment
 
-    API Setup:
+This keeps your project isolated from system Python packages.
+Step-by-Step Instructions:
 
-        We use OpenWeatherMap's free API (sign up at openweathermap.org to get an API key)
+    Install required system packages:
+        sudo apt install python3-venv python3-pip
 
-        BASE_URL is the endpoint for current weather data
+    Create a project directory:
+        mkdir weather_bot && cd weather_bot
 
-        units=metric converts temperatures to Celsius
+    Create a virtual environment:
+        python3 -m venv weather_env
 
-    User Input:
+    Activate the virtual environment:
+        source weather_env/bin/activate
+Your terminal prompt should now show (weather_env) at the beginning
 
-        The bot asks for a city name through standard input
+    Install requests in the virtual environment:
+        pip install requests
+        
+    Create your script:
+        nano weather_bot.py
 
-    API Request:
+    Paste weatherBot V1_python_.py code:
+    
+    Save and exit: Ctrl+O → Enter → Ctrl+X
 
-        Constructs the complete request URL with city and API key
-
-        Uses requests library to send HTTP GET request
-
-    Response Handling:
-
-        Checks if response is successful (status code 200)
-
-        Converts JSON response to Python dictionary
-
-        Extracts temperature, weather description, and humidity
-
-    Error Handling:
-
-        Catches network errors with try/except
-
-        Handles invalid city names through status code checking
-
-    Output:
-
-        Formats and displays the weather information in readable format
-
-To Use This Bot:
-
-    Install Python if not already installed
-
-    Install requests library: pip install requests
-
-    Get free API key from OpenWeatherMap
-
-    Replace "YOUR_API_KEY" with your actual key
-
-    Run the script
+    Run your bot:
+        python weather_bot.py
