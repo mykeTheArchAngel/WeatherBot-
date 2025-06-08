@@ -1,4 +1,5 @@
-#--KALI LINUX--
+#KALI LINUX
+--
 Create a Virtual Environment
 
 This keeps your project isolated from system Python packages.
@@ -29,3 +30,7 @@ Your terminal prompt should now show (weather_env) at the beginning
 
     Run your bot:
         python weather_bot.py
+        
+When You Want to Exit:
+
+        deactivate  # To leave the virtual environment
