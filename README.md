@@ -1,4 +1,3 @@
-# WeatherBot-
 Step-by-Step Explanation:
 
     API Setup:
